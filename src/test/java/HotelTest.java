@@ -13,7 +13,6 @@ public class HotelTest {
         assertNotNull(hotel);
     }
 
-
     @Test
     public void canCheckGuestIn(){
         Hotel hotel = new Hotel("CodeClan Towers");
@@ -37,4 +36,12 @@ public class HotelTest {
         assertEquals("Checked out", hotel.checkGuestOut(guest));
     }
 
+    @Test
+    public void canAddDiningRoomToHotel(){
+        Hotel hotel = new Hotel("CodeClan Towers");
+        DiningRoom frontLounge = new DiningRoom("Front Lounge");
+        hotel.addDiningRoomToHotel(frontLounge);
+        assertEquals(true ,hotel.getDiningRooms().containsKey("Front Lounge"));
     }
+
+}
