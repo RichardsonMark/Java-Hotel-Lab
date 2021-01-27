@@ -18,7 +18,7 @@ public class HotelTest {
     public void canCheckGuestIn(){
         Hotel hotel = new Hotel("CodeClan Towers");
         Guest guest = new Guest("CodeClan Executive");
-        Bedroom bedroom = new Bedroom(101, 4, "Family");
+        Bedroom bedroom = new Bedroom(101, 4, "Family", 195);
         hotel.setBedrooms(bedroom);
         hotel.checkGuestIn(guest);
         assertEquals(1, hotel.getBedrooms().size());
@@ -29,7 +29,7 @@ public class HotelTest {
     public void canCheckGuestOut() {
         Hotel hotel = new Hotel("CodeClan Towers");
         Guest guest = new Guest("CodeClan Executive");
-        Bedroom bedroom = new Bedroom(101, 4, "Family");
+        Bedroom bedroom = new Bedroom(101, 4, "Family", 195);
         hotel.setBedrooms(bedroom);
         hotel.checkGuestIn(guest);
 //        hotel.checkGuestOut(guest);
