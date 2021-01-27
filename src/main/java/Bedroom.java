@@ -35,8 +35,8 @@ public class Bedroom {
         return guests;
     }
 
-    public void setGuests(ArrayList<Guest> guests) {
-        this.guests = guests;
+    public void setGuests(Guest guest) {
+        guests.add(guest);
     }
 
     public String getRoomType() {
