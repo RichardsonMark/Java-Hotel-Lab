@@ -7,14 +7,14 @@ public class Hotel {
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<MeetingRoom> meetingRooms;
     private HashMap<String, DiningRoom > diningRooms;
-
-
+    private HashMap<Integer, Bedroom > emptyBedrooms;
 
     public Hotel(String name) {
         this.name = name;
         this.bedrooms = new ArrayList<>();
         this.meetingRooms = new ArrayList<>();
         this.diningRooms = new HashMap<>();
+        this.emptyBedrooms = new HashMap<>();
     }
 
     public String getName() {
@@ -68,4 +68,11 @@ public class Hotel {
         diningRooms.put(diningRoom.getName(), diningRoom);
     }
 
+    public void addEmptyRoom(Bedroom bedroom){
+        emptyBedrooms.put(bedroom.getRoomNumber(), bedroom);
+    }
+
+    public void removeOccupiedRoom(Bedroom bedroom){
+        emptyBedrooms.remove(bedroom.getRoomNumber());
+    }
 }
